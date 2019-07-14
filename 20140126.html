@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>전기기능사 기출 문제</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <style>
+      @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+      body {
+        margin: 0;
+        font-family: 'Nanum Myeongjo', serif;
+        font-size: 20px;
+      }
+
+      #topHeader {
+        overflow: hidden;
+        border-style: double;
+        border-color: red;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        position: fixed;
+      }
+
+      .quiz-container {
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-bottom: 80px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      p.choice {
+        line-height: 2.1;
+      }
+
+      .solutionButton {
+        display: none;
+      }
+
+      .description {
+        display: none;
+      }
+    </style>
+    <script type="text/javascript">
+      function checkAnswer() {
+        var quizzes = document.getElementsByClassName("quiz-container");
+        var totalQUIZ = quizzes.length;
+        var checked = false;
+
+        for (var i = 0; i < totalQUIZ; i++) {
+          var answerProperty = quizzes[i].querySelectorAll("input.answerProperty");
+          var answerItem = quizzes[i].querySelectorAll("span.answerItem");
+
+          var countAnswerItem = answerProperty.length;
+
+          for (var j = 0; j < countAnswerItem; j++) {
+            if (answerProperty[j].checked == true) {
+              checked = true;
+              if (answerProperty[j].value == "true") {
+                answerItem[j].style.color = "blue";
+                quizzes[i].getElementsByClassName("question")[0].style.color = "blue";
+              } else {
+                answerItem[j].style.color = "red";
+                answerItem[j].style.textDecoration = "line-through";
+                quizzes[i].getElementsByClassName("question")[0].style.color = "red";
+              }
+              break;
+            }
+            if (checked == true) {
+              checked = false;
+            } else {
+              quizzes[i].getElementsByClassName("question")[0].style.color = "red";
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    <div class="top-container">
+    </div>
+
+    <div class="header" id="topHeader">
+      <h1>기출문제(2014년 1월 26일 시행)</h1>
+      <button type="button" onclick="checkAnswer()">채점</button><br><br>
+    </div>
+
+    <div class="contents" style="margin-top:150px;padding-top:50px;">
+      <div id="Q0001" class="quiz-container">
+        <p class="question">
+          1. 기전력 1.5[V], 내부 저항 0.2[Ω]인 전지 5개를 직렬로 연결하고 이를 단락하였을 때의 단락전류[A]는?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0001" value=""><span class="answerItem">① 1.5</span><br>
+          <input class="answerProperty" type="radio" name="Q0001" value=""><span class="answerItem">② 4.5</span><br>
+          <input class="answerProperty" type="radio" name="Q0001" value="true"><span class="answerItem">③ 7.5</span><br>
+          <input class="answerProperty" type="radio" name="Q0001" value=""><span class="answerItem">④ 15</span>
+        </p>
+        <div class="solutionButton">
+          <button type="button" name="button" display="none">풀이</button>
+        </div>
+        <div id="S0001" class="description">
+          <p>test</p>
+        </div>
+      </div>
+
+      <div id="Q0002" class="quiz-container">
+        <p class="question">
+          2. 도면과 같이 공기 중에 놓인 $2\times10$[C]의 전하에서 2[m] 떨어진 점 P와 1[m] 떨어진 점 Q와의 전위차는
+          몇 [V]인가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0002" value=""><span class="answerItem">① 80[V]</span><br>
+          <input class="answerProperty" type="radio" name="Q0002" value="true"><span class="answerItem">② 90[V]</span><br>
+          <input class="answerProperty" type="radio" name="Q0002" value=""><span class="answerItem">③ 100[V]</span><br>
+          <input class="answerProperty" type="radio" name="Q0002" value=""><span class="answerItem">④ 110[V]</span>
+        </p>
+      </div>
+
+      <div id="Q0003" class="quiz-container">
+        <p class="question">
+          3. 전류의 발열작용과 관계가 있는 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0003" value="true"><span class="answerItem">① 줄의 법칙</span><br>
+          <input class="answerProperty" type="radio" name="Q0003" value=""><span class="answerItem">② 키르히호프의 법칙</span><br>
+          <input class="answerProperty" type="radio" name="Q0003" value="true" ><span class="answerItem">③ 옴의 법칙</span><br>
+          <input class="answerProperty" type="radio" name="Q0003" value=""><span class="answerItem">④ 플레밍의 법칙</span>
+        </p>
+      </div>
+
+      <div id="Q0004" class="quiz-container">
+        <p class="question">
+          4. $\frac{\pi}{6}$[rad]는 몇 도인가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0004" value="true"><span class="answerItem">① 30$^{\circ}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0004" value=""><span class="answerItem">② 45$^{\circ}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0004" value=""><span class="answerItem">③ 60$^{\circ}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0004" value=""><span class="answerItem">④ 90$^{\circ}$</span>
+        </p>
+      </div>
+
+      <div id="Q0005" class="quiz-container">
+        <p class="question">
+          5. $i = \sin\!{\omega}t + 4\sin\!{(3{\omega}t - \theta)}$[A]로 표시되는 전류의 등가 사인파
+          최대값은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0005" value=""><span class="answerItem">① 2[A]</span><br>
+          <input class="answerProperty" type="radio" name="Q0005" value=""><span class="answerItem">② 3[A]</span><br>
+          <input class="answerProperty" type="radio" name="Q0005" value=""><span class="answerItem">③ 4[A]</span><br>
+          <input class="answerProperty" type="radio" name="Q0005" value="true"><span class="answerItem">④ 5[A]</span>
+        </p>
+      </div>
+
+      <div id="Q0006" class="quiz-container">
+        <p class="question">
+          6. 전자석의 특징으로 옳지 않은 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0006" value=""><span class="answerItem">① 전류의 방향이 바뀌면 전자석의 극도 바뀐다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0006" value=""><span class="answerItem">② 코일의 감은 횟수가 많을 수록 강한 전자석이 된다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0006" value="true"><span class="answerItem">③ 전류를 많이 공급하면 무한정 자력이 강해진다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0006" value=""><span class="answerItem">④ 같은 전류라도 코일 속에 철심을 넣으면 더 강한 전자석이 된다.</span>
+        </p>
+      </div>
+
+      <div id="Q0007" class="quiz-container">
+        <p class="question">
+          7. 2F, 4F, 6F의 콘덴서 3개의 C정전용량은 몇 [F]인가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0007" value=""><span class="answerItem">① 1.5</span><br>
+          <input class="answerProperty" type="radio" name="Q0007" value=""><span class="answerItem">② 4</span><br>
+          <input class="answerProperty" type="radio" name="Q0007" value=""><span class="answerItem">③ 8</span><br>
+          <input class="answerProperty" type="radio" name="Q0007" value="true"><span class="answerItem">④ 12</span>
+        </p>
+      </div>
+
+      <div id="Q0008" class="quiz-container">
+        <p class="question">
+          8. 출력 P[kVA]의 단상변압기의 2대를 V결선한 때의 3상 출력[kVA]은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0008" value=""><span class="answerItem">① P</span><br>
+          <input class="answerProperty" type="radio" name="Q0008" value="true"><span class="answerItem">② $\sqrt{3}P$</span><br>
+          <input class="answerProperty" type="radio" name="Q0008" value=""><span class="answerItem">③ 2P</span><br>
+          <input class="answerProperty" type="radio" name="Q0008" value=""><span class="answerItem">④ 3P</span>
+        </p>
+      </div>
+
+      <div id="Q0009" class="quiz-container">
+        <p class="question">
+          9. 그림에서 평형조건이 맞는 식은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0009" value="true"><span class="answerItem">① $C_1R_1 = C_2R_2$</span><br>
+          <input class="answerProperty" type="radio" name="Q0009" value=""><span class="answerItem">② $C_1R_2 = C_2R_1$</span><br>
+          <input class="answerProperty" type="radio" name="Q0009" value=""><span class="answerItem">③ $C_1R_2 = R_1R_2$</span><br>
+          <input class="answerProperty" type="radio" name="Q0009" value=""><span class="answerItem">④ $\frac{1}{C_1C_2} = R_1R_2$</span>
+        </p>
+      </div>
+
+      <div id="Q0010" class="quiz-container">
+        <p class="question">
+          10. 30[μF]과 40[μF]의 콘덴서를 병렬로 접속한 후 100[V]의 전압을 가했을 때 전 전하량은 몇 [C]인가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0010" value=""><span class="answerItem">① $17 \times 10^{-4}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0010" value=""><span class="answerItem">② $34 \times 10^{-4}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0010" value=""><span class="answerItem">③ $56 \times 10^{-4}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0010" value="true"><span class="answerItem">④ $70 \times 10^{-4}$</span>
+        </p>
+      </div>
+
+      <div id="Q0011" class="quiz-container">
+        <p class="question">
+          11. 어떤 저항(R)에 전압(V)를 가하니 전류(I)가 흘렀다. 이 회로의 저항(R)을 20[%] 줄이면 전류(I)는
+          처음의 몇 배가 되는가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0011" value=""><span class="answerItem">① 0.8</span><br>
+          <input class="answerProperty" type="radio" name="Q0011" value=""><span class="answerItem">② 0.88</span><br>
+          <input class="answerProperty" type="radio" name="Q0011" value="true"><span class="answerItem">③ 1.25</span><br>
+          <input class="answerProperty" type="radio" name="Q0011" value=""><span class="answerItem">④ 2.04</span>
+        </p>
+      </div>
+
+      <div id="Q0012" class="quiz-container">
+        <p class="question">
+          12. 단상전력계 2대를 사용하여 2전력계법으로 3상 전력을 측정하고자 한다. 두 전력계의 지시값이 각각
+          $P_1$[W], $P_2$[W]이었다. 3상 전력 P[W]를 구하는 식으로 옳은 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0012" value=""><span class="answerItem">① $P = \sqrt{3}{(P_1 \times P_2)}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0012" value=""><span class="answerItem">② $P = P_1 - P_2$</span><br>
+          <input class="answerProperty" type="radio" name="Q0012" value=""><span class="answerItem">③ $P = P_1 \times P_2$</span><br>
+          <input class="answerProperty" type="radio" name="Q0012" value="true"><span class="answerItem">④ $P = P_1 + P_2$</span>
+        </p>
+      </div>
+
+      <div id="Q0013" class="quiz-container">
+        <p class="question">
+          13. 그림과 같이 $R_1$, $R_2$, $R_3$의 저항 3개가 직렬로 접속되었을 때 합성저항은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0013" value="true"><span class="answerItem">① $R = \frac{(R_1 + R_2)R_3}{R_1 + R_2 + R_3}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0013" value=""><span class="answerItem">② $R = \frac{(R_2 + R_3)R_3}{R_1 + R_2 + R_3}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0013" value=""><span class="answerItem">③ $R = \frac{(R_1 + R_3)R_3}{R_1 + R_2 + R_3}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0013" value=""><span class="answerItem">④ $R = \frac{R_1R_2R_3}{R_1 + R_2 + R_3}$</span>
+        </p>
+      </div>
+
+      <div id="Q0014" class="quiz-container">
+        <p class="question">
+          14. 공기 중에서 +$m$[Wb]의 자극으로부터 나오는 자기력선의 총 수를 나타낸 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0014" value=""><span class="answerItem">① $m$</span><br>
+          <input class="answerProperty" type="radio" name="Q0014" value=""><span class="answerItem">② $\frac{\mu_0}{m}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0014" value="true"><span class="answerItem">③ $\frac{m}{\mu_0}$</span><br>
+          <input class="answerProperty" type="radio" name="Q0014" value=""><span class="answerItem">④ $\mu_0m$</span>
+        </p>
+      </div>
+
+      <div id="Q0015" class="quiz-container">
+        <p class="question">
+          15. 24[C]의 전기량이 이동해서 144[J]의 일을 했을 때 기전력은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0015" value=""><span class="answerItem">① 2[V]</span><br>
+          <input class="answerProperty" type="radio" name="Q0015" value=""><span class="answerItem">② 4[V]</span><br>
+          <input class="answerProperty" type="radio" name="Q0015" value="true"><span class="answerItem">③ 6[V]</span><br>
+          <input class="answerProperty" type="radio" name="Q0015" value=""><span class="answerItem">④ 8[V]</span>
+        </p>
+      </div>
+
+      <div id="Q0016" class="quiz-container">
+        <p class="question">
+          16. $4 \times 10^{-5}$[C]과 $6 \times 10^{-5}$[C]의 두 전하가 자유공간에 2[m]의
+          거리에 있을 때 그 사이에 작용하는 힘은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0016" value=""><span class="answerItem">① 5.4[N], 흡인력이 작용한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0016" value="true"><span class="answerItem">② 5.4[N], 반발력이 작용한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0016" value=""><span class="answerItem">③ $\frac{7}{9}$[N], 흡인력이 작용한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0016" value=""><span class="answerItem">④ $\frac{7}{9}$[N], 반발력이 작용한다.</span>
+        </p>
+      </div>
+
+      <div id="Q0017" class="quiz-container">
+        <p class="question">
+          17. 다음 중 비유전율이 가장 큰 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0017" value=""><span class="answerItem">① 종이</span><br>
+          <input class="answerProperty" type="radio" name="Q0017" value=""><span class="answerItem">② 염화비닐</span><br>
+          <input class="answerProperty" type="radio" name="Q0017" value=""><span class="answerItem">③ 운모</span><br>
+          <input class="answerProperty" type="radio" name="Q0017" value="true"><span class="answerItem">④ 산화티탄 자기</span>
+        </p>
+      </div>
+
+      <div id="Q0018" class="quiz-container">
+        <p class="question">
+          18. 코일의 자체 인턱턴스($L$)와 권수($N$)의 관계로 옳은 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0018" value=""><span class="answerItem">① $L \propto N$</span><br>
+          <input class="answerProperty" type="radio" name="Q0018" value="true"><span class="answerItem">② $L \propto N^2$</span><br>
+          <input class="answerProperty" type="radio" name="Q0018" value=""><span class="answerItem">③ $L \propto N^3$</span><br>
+          <input class="answerProperty" type="radio" name="Q0018" value=""><span class="answerItem">④ $L \propto \frac{1}{N}$</span>
+        </p>
+      </div>
+
+      <div id="Q0019" class="quiz-container">
+        <p class="question">
+          19. 200[V], 500[W]의 전열기를 220[V] 전원에 사용하였다면 이때의 전력은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0019" value=""><span class="answerItem">① 400[W]</span><br>
+          <input class="answerProperty" type="radio" name="Q0019" value=""><span class="answerItem">② 500[W]</span><br>
+          <input class="answerProperty" type="radio" name="Q0019" value=""><span class="answerItem">③ 550[W]</span><br>
+          <input class="answerProperty" type="radio" name="Q0019" value="true"><span class="answerItem">④ 605[W]</span>
+        </p>
+      </div>
+
+      <div id="Q0020" class="quiz-container">
+        <p class="question">
+          20. 자체 인덕턴스가 $L_1$, $L_2$인 두 코일을 직렬로 접속하였을 때 합성 인덕턴스를 나타낸 식은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0020" value=""><span class="answerItem">① $L_1 + L_2\pm M$</span><br>
+          <input class="answerProperty" type="radio" name="Q0020" value=""><span class="answerItem">② $L_1 - L_2\pm M$</span><br>
+          <input class="answerProperty" type="radio" name="Q0020" value="true"><span class="answerItem">③ $L_1 + L_2\pm 2M$</span><br>
+          <input class="answerProperty" type="radio" name="Q0020" value=""><span class="answerItem">④ $L_1 + L_2\pm 2M$</span>
+        </p>
+      </div>
+
+      <div id="Q0021" class="quiz-container">
+        <p class="question">
+          21. 직류전동기의 특성에 대한 설명으로 틀린 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0021" value=""><span class="answerItem">① 직권전동기는 가변 속도전동기이다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0021" value=""><span class="answerItem">② 분권전동기에서는 계자회로에 퓨즈를 사용하지 않는다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0021" value=""><span class="answerItem">③ 분권전동기는 정속도 전동기이다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0021" value="true"><span class="answerItem">④ 가동 복권전동기는 기동 시 역회전할 염려가 있다.</span>
+        </p>
+      </div>
+
+      <div id="Q0022" class="quiz-container">
+        <p class="question">
+          22. 계전기가 설치된 위치에서 고장점까지 임피던스에 비례하여 동작하는 보호계전기는?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0022" value=""><span class="answerItem">① 방향단락 계전기</span><br>
+          <input class="answerProperty" type="radio" name="Q0022" value="true"><span class="answerItem">② 거리 계전기</span><br>
+          <input class="answerProperty" type="radio" name="Q0022" value=""><span class="answerItem">③ 단락회로 선택 계전기</span><br>
+          <input class="answerProperty" type="radio" name="Q0022" value=""><span class="answerItem">④ 과전압 계전기</span>
+        </p>
+      </div>
+
+      <div id="Q0023" class="quiz-container">
+        <p class="question">
+          23. 인버터(inverter)란?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0023" value=""><span class="answerItem">① 교류를 직류로 변환</span><br>
+          <input class="answerProperty" type="radio" name="Q0023" value="true"><span class="answerItem">② 직류를 교류로 변환</span><br>
+          <input class="answerProperty" type="radio" name="Q0023" value=""><span class="answerItem">③ 교류를 교류로 변환</span><br>
+          <input class="answerProperty" type="radio" name="Q0023" value=""><span class="answerItem">④ 직류를 직류로 변환</span>
+        </p>
+      </div>
+
+      <div id="Q0024" class="quiz-container">
+        <p class="question">
+          24. 다음은 3상 유도전동기, 고정자 권선의 결선도를 나타낸 것이다. 맞는 사항을 고르시오.
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0024" value=""><span class="answerItem">① 3상 2극, Y결선</span><br>
+          <input class="answerProperty" type="radio" name="Q0024" value="true"><span class="answerItem">② 3상 4극, Y결선</span><br>
+          <input class="answerProperty" type="radio" name="Q0024" value=""><span class="answerItem">③ 3상 2극, &Delta;결선</span><br>
+          <input class="answerProperty" type="radio" name="Q0024" value=""><span class="answerItem">④ 3상 4극, &Delta;결선</span>
+        </p>
+      </div>
+
+      <div id="Q0025" class="quiz-container">
+        <p class="question">
+          25. 다음 중 턴오프(소호)가 가능한 소자는?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0025" value="true"><span class="answerItem">① GTO</span><br>
+          <input class="answerProperty" type="radio" name="Q0025" value=""><span class="answerItem">② TRJAC</span><br>
+          <input class="answerProperty" type="radio" name="Q0025" value=""><span class="answerItem">③ SCR</span><br>
+          <input class="answerProperty" type="radio" name="Q0025" value=""><span class="answerItem">④ LASCR</span>
+        </p>
+      </div>
+
+      <div id="Q0026" class="quiz-container">
+        <p class="question">
+          26. 3상 동기발전기에서 전기자 전류가 무부하 유도기전력보다 $\frac{\pi}{2}$[rad] 앞선 경우($X_C$만의 부하)의
+          전기자 반작용은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0026" value=""><span class="answerItem">① 횡축반작용</span><br>
+          <input class="answerProperty" type="radio" name="Q0026" value="true"><span class="answerItem">② 증자작용</span><br>
+          <input class="answerProperty" type="radio" name="Q0026" value=""><span class="answerItem">③ 감자작용</span><br>
+          <input class="answerProperty" type="radio" name="Q0026" value=""><span class="answerItem">④ 편자작용</span>
+        </p>
+      </div>
+
+      <div id="Q0027" class="quiz-container">
+        <p class="question">
+          27. 권수비 30인 변압기의 저압측 전압이 8[V]인 경우 극성시험에서 가극성과 감극성의 전압 차이는 몇 [V]인가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0027" value=""><span class="answerItem">① 24</span><br>
+          <input class="answerProperty" type="radio" name="Q0027" value="true"><span class="answerItem">② 16</span><br>
+          <input class="answerProperty" type="radio" name="Q0027" value=""><span class="answerItem">③ 8</span><br>
+          <input class="answerProperty" type="radio" name="Q0027" value=""><span class="answerItem">④ 4</span>
+        </p>
+      </div>
+
+      <div id="Q0028" class="quiz-container">
+        <p class="question">
+          28. 3상 유도전동기의 회전원리를 설명한 것 중 틀린 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0028" value=""><span class="answerItem">① 회전자의 회전속도가 증가하면 도체를 관통하는 자속수는 감소한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0028" value="true"><span class="answerItem">② 회전자의 회전속도가 증가하면 슬립도 증가한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0028" value=""><span class="answerItem">③ 부하를 회전시키기 위해서는 회전자의 속도는 동기속도 이하로 운전되어야 한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0028" value=""><span class="answerItem">④ 3상 교류전압을 고정자에 공급하면 고정자 내부에서 회전 자기장이 발생된다.</span>
+        </p>
+      </div>
+
+      <div id="Q0029" class="quiz-container">
+        <p class="question">
+          29. 동기발전기의 난조를 방지하는 가장 유효한 방법은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0029" value=""><span class="answerItem">① 회전자의 관성을 크게 한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0029" value="true"><span class="answerItem">② 제동권선을 자극면에 설치한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0029" value=""><span class="answerItem">③ $X_S$를 작게 하고 동기화력을 크게 한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0029" value=""><span class="answerItem">④ 자극수를 적게 한다.</span>
+        </p>
+      </div>
+
+      <div id="Q0030" class="quiz-container">
+        <p class="question">
+          30. 대지전압 150[V] 초과 300[V] 이하인 저압 전로의 절연저항[M&Omega;]값은 얼마 이상인가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0030" value=""><span class="answerItem">① 0.1</span><br>
+          <input class="answerProperty" type="radio" name="Q0030" value="true"><span class="answerItem">② 0.2</span><br>
+          <input class="answerProperty" type="radio" name="Q0030" value=""><span class="answerItem">③ 0.4</span><br>
+          <input class="answerProperty" type="radio" name="Q0030" value=""><span class="answerItem">④ 0.8</span>
+        </p>
+      </div>
+
+      <div id="Q0031" class="quiz-container">
+        <p class="question">
+          31. 변압기의 퍼센트 저항강하가 3[%], 퍼센트 리액턴스 강하가 4[%]이고, 역률이 80[%] 지상이다.
+          이 변압기의 전압 변동률[%]은?
+        </p class="choice">
+          <input class="answerProperty" type="radio" name="Q0031" value=""><span class="answerItem">① 3.2</span></span><br>
+          <input class="answerProperty" type="radio" name="Q0031" value="true"><span class="answerItem">② 4.8</span></span><br>
+          <input class="answerProperty" type="radio" name="Q0031" value=""><span class="answerItem">③ 5.0</span></span><br>
+          <input class="answerProperty" type="radio" name="Q0031" value=""><span class="answerItem">④ 5.6</span></span>
+        </p>
+      </div>
+
+      <div id="Q0032" class="quiz-container">
+        <p class="question">
+          32. 2극의 직류발전기에서 코일변의 유효길이 $l$[m], 공극의 평균자속밀도 B[wb/㎡], 주변속도 $v$[m/s]일 때
+          전기자도체 1개에 유도되는 기전력은 평균값은 $e$[V]은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0032" value="true"><span class="answerItem">① $e = Blv$[V]</span><br>
+          <input class="answerProperty" type="radio" name="Q0032" value=""><span class="answerItem">② $e = \sin\!{\omega t}$[V]</span><br>
+          <input class="answerProperty" type="radio" name="Q0032" value=""><span class="answerItem">③ $e = 2B\sin\!{\omega t}$[V]</span><br>
+          <input class="answerProperty" type="radio" name="Q0032" value=""><span class="answerItem">④ $e = v^2Bl$[V]</span>
+        </p>
+      </div>
+
+      <div id="Q0033" class="quiz-container">
+        <p class="question">
+          33. 3상 동기전동기의 토크에 대한 설명으로 옳은 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0033" value="true"><span class="answerItem">① 공급전압 크기에 비례한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0033" value=""><span class="answerItem">② 공급전압 크기의 제곱에 비례한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0033" value=""><span class="answerItem">③ 부하각 크기에 반비례한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0033" value=""><span class="answerItem">④ 부하각 크기의 제곱에 비례한다.</span>
+        </p>
+      </div>
+
+      <div id="Q0034" class="quiz-container">
+        <p class="question">
+          34. 직류 분권발전기를 동일 극성의 전압을 단자에 인가하여 전동기로 사용하면?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0034" value="true"><span class="answerItem">① 동일 방향으로 회전한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0034" value=""><span class="answerItem">② 반대 방향으로 회전한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0034" value=""><span class="answerItem">③ 회전하지 않는다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0034" value=""><span class="answerItem">④ 소손된다.</span>
+        </p>
+      </div>
+
+      <div id="Q0035" class="quiz-container">
+        <p class="question">
+          35. 병렬운전 중인 동기 임피던스 5[&Omega;]인 2대의 3상 동기발전기의 유도기전력에 200[V]의
+          전압차이가 있다면 무효순환전류[A]는?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0035" value=""><span class="answerItem">① 5</span><br>
+          <input class="answerProperty" type="radio" name="Q0035" value=""><span class="answerItem">② 10</span><br>
+          <input class="answerProperty" type="radio" name="Q0035" value="true"><span class="answerItem">③ 20</span><br>
+          <input class="answerProperty" type="radio" name="Q0035" value=""><span class="answerItem">④ 40</span>
+        </p>
+      </div>
+
+      <div id="Q0036" class="quiz-container">
+        <p class="question">
+          36. 변압기의 절연물의 열화 정도를 파악하는 방법으로서 적절하지 않은 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0036" value=""><span class="answerItem">① 유전정접</span><br>
+          <input class="answerProperty" type="radio" name="Q0036" value=""><span class="answerItem">② 유중가스분석</span><br>
+          <input class="answerProperty" type="radio" name="Q0036" value="true"><span class="answerItem">③ 접지저항측정</span><br>
+          <input class="answerProperty" type="radio" name="Q0036" value=""><span class="answerItem">④ 흡수전류나 잔류전류 측정</span>
+        </p>
+      </div>
+
+      <div id="Q0037" class="quiz-container">
+        <p class="question">
+          37. 송배전계통에 거의 사용되지 않는 변압기 3상 결선방식은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0037" value=""><span class="answerItem">① Y-&Delta;</span><br>
+          <input class="answerProperty" type="radio" name="Q0037" value="true"><span class="answerItem">② Y-Y</span><br>
+          <input class="answerProperty" type="radio" name="Q0037" value=""><span class="answerItem">③ &Delta;-Y</span><br>
+          <input class="answerProperty" type="radio" name="Q0037" value=""><span class="answerItem">④ &Delta;-&Delta;</span>
+        </p>
+      </div>
+
+      <div id="Q0038" class="quiz-container">
+        <p class="question">
+          38. 병렬 운전 중인 두 동기발전기의 유도기전력이 2000[V], 위상차 $60^\circ$, 동기 리액턴스 100[&Omega;]이다.
+          유효순환전류[A]는?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0038" value=""><span class="answerItem">① 5</span><br>
+          <input class="answerProperty" type="radio" name="Q0038" value="true"><span class="answerItem">② 10</span><br>
+          <input class="answerProperty" type="radio" name="Q0038" value=""><span class="answerItem">③ 15</span><br>
+          <input class="answerProperty" type="radio" name="Q0038" value=""><span class="answerItem">④ 20</span>
+        </p>
+      </div>
+
+      <div id="Q0039" class="quiz-container">
+        <p class="question">
+          39. 직류발전기에서 계자의 주된 역할은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0039" value=""><span class="answerItem">① 기전력을 유도한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0039" value="true"><span class="answerItem">② 자속을 만든다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0039" value=""><span class="answerItem">③ 정류작용을 한다.</span><br>
+          <input class="answerProperty" type="radio" name="Q0039" value=""><span class="answerItem">④ 정류자면에 접촉한다.</span>
+        </p>
+      </div>
+
+      <div id="Q0040" class="quiz-container">
+        <p class="question">
+          40. 전압변동률이 작고 자여자이므로 다른 전원이 필요 없으며, 계자저항기를 사용한 전압조정이 가능하므로
+          전기 화학용, 전지의 충전용 발전기로 가장 적합한 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0040" value=""><span class="answerItem">① 타여자 발전기</span><br>
+          <input class="answerProperty" type="radio" name="Q0040" value=""><span class="answerItem">② 직류 복권발전기</span><br>
+          <input class="answerProperty" type="radio" name="Q0040" value="true"><span class="answerItem">③ 직류 분권발전기</span><br>
+          <input class="answerProperty" type="radio" name="Q0040" value=""><span class="answerItem">④ 직류 직권발전기</span>
+        </p>
+      </div>
+
+      <div id="Q0040" class="quiz-container">
+        <p class="question">
+          41. 사용전압 15[kV] 이하의 특고압 가공전선로의 중성선의 접지선을 중성선으로부터 분리하였을 경우 1[km]마다의
+          중성선과 대지 사이의 합성 전기저항값은 몇 [&Omega;] 이하로 하여야 하는가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0040" value="true"><span class="answerItem">① 30</span><br>
+          <input class="answerProperty" type="radio" name="Q0040" value=""><span class="answerItem">② 100</span><br>
+          <input class="answerProperty" type="radio" name="Q0040" value=""><span class="answerItem">③ 150</span><br>
+          <input class="answerProperty" type="radio" name="Q0040" value=""><span class="answerItem">④ 300</span>
+        </p>
+      </div>
+
+      <div id="Q0042" class="quiz-container">
+        <p class="question">
+          42. 토지의 상황이나 기타 사유로 인하여 보통지선을 시설할 수 없을 때 전주와 전주 간 또는 전주와 지주 간에
+          시설할 수 있는 지선은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0042" value=""><span class="answerItem">① 보통지선</span><br>
+          <input class="answerProperty" type="radio" name="Q0042" value="true"><span class="answerItem">② 수평지선</span><br>
+          <input class="answerProperty" type="radio" name="Q0042" value=""><span class="answerItem">③ Y지선</span><br>
+          <input class="answerProperty" type="radio" name="Q0042" value=""><span class="answerItem">④ 궁지선</span>
+        </p>
+      </div>
+
+      <div id="Q0043" class="quiz-container">
+        <p class="question">
+          43. 펜치로 절단하기 힘든 굵은 전선의 절단에 사용되는 공구는?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0043" value=""><span class="answerItem">① 파이프 렌치</span><br>
+          <input class="answerProperty" type="radio" name="Q0043" value=""><span class="answerItem">② 파이프 커터</span><br>
+          <input class="answerProperty" type="radio" name="Q0043" value="true"><span class="answerItem">③ 클리퍼</span><br>
+          <input class="answerProperty" type="radio" name="Q0043" value=""><span class="answerItem">④ 와이어 게이지</span>
+        </p>
+      </div>
+
+      <div id="Q0044" class="quiz-container">
+        <p class="question">
+          44. 옥외용 비닐절연전선의 약호는?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0044" value="true"><span class="answerItem">① OW</span><br>
+          <input class="answerProperty" type="radio" name="Q0044" value=""><span class="answerItem">② DV</span><br>
+          <input class="answerProperty" type="radio" name="Q0044" value=""><span class="answerItem">③ NR</span><br>
+          <input class="answerProperty" type="radio" name="Q0044" value=""><span class="answerItem">④ FTC</span>
+        </p>
+      </div>
+
+      <div id="Q0045" class="quiz-container">
+        <p class="question">
+          45. 교류 차단기에 포함되지 않는 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0045" value=""><span class="answerItem">① GCB</span><br>
+          <input class="answerProperty" type="radio" name="Q0045" value="true"><span class="answerItem">② HSCB</span><br>
+          <input class="answerProperty" type="radio" name="Q0045" value=""><span class="answerItem">③ VCB</span><br>
+          <input class="answerProperty" type="radio" name="Q0045" value=""><span class="answerItem">④ ABB</span>
+        </p>
+      </div>
+
+      <div id="Q0046" class="quiz-container">
+        <p class="question">
+          46. 계기용 변류기의 약호는?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0046" value="true"><span class="answerItem">① CT</span><br>
+          <input class="answerProperty" type="radio" name="Q0046" value=""><span class="answerItem">② WH</span><br>
+          <input class="answerProperty" type="radio" name="Q0046" value=""><span class="answerItem">③ CB</span><br>
+          <input class="answerProperty" type="radio" name="Q0046" value=""><span class="answerItem">④ DS</span>
+        </p>
+      </div>
+
+      <div id="Q0047" class="quiz-container">
+        <p class="question">
+          47. 사용전압이 440[V]인 3상 유도전동기의 외함 접지 공사 시 접지선의 굵기는 공칭단면적 몇 [㎟]
+          이상의 연동선이어야 하는가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0047" value="true"><span class="answerItem">① 2.5</span><br>
+          <input class="answerProperty" type="radio" name="Q0047" value=""><span class="answerItem">② 6</span><br>
+          <input class="answerProperty" type="radio" name="Q0047" value=""><span class="answerItem"><span>③ 10</span><br>
+          <input class="answerProperty" type="radio" name="Q0047" value=""><span class="answerItem">④ 16</span>
+        </p>
+      </div>
+
+      <div id="Q0048" class="quiz-container">
+        <p class="question">
+          48. 옥내배선 공사 작업 중 접속함에서 쥐꼬리 접속을 할 때 필요한 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0048" value=""><span class="answerItem">① 커플링</span><br>
+          <input class="answerProperty" type="radio" name="Q0048" value="true"><span class="answerItem">② 와이어 커넥터</span><br>
+          <input class="answerProperty" type="radio" name="Q0048" value=""><span class="answerItem">③ 로크너트</span><br>
+          <input class="answerProperty" type="radio" name="Q0048" value=""><span class="answerItem">④ 부싱</span>
+        </p>
+      </div>
+
+      <div id="Q0049" class="quiz-container">
+        <p class="question">
+          49. 경질 비닐 전선관 1본의 표준 길이[m]는?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0049" value=""><span class="answerItem">① 3</span><br>
+          <input class="answerProperty" type="radio" name="Q0049" value=""><span class="answerItem">② 3.6</span><br>
+          <input class="answerProperty" type="radio" name="Q0049" value="true"><span class="answerItem">③ 4</span><br>
+          <input class="answerProperty" type="radio" name="Q0049" value=""><span class="answerItem">④ 5.5</span>
+        </p>
+      </div>
+
+      <div id="Q0050" class="quiz-container">
+        <p class="question">
+          50. 애자사용 공사에서 전선의 지지점 간의 거리는 전선을 조영재의 윗면 또는 옆면에 따라 붙이는
+          경우에는 몇 [m] 이하인가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0050" value=""><span class="answerItem">① 1</span><br>
+          <input class="answerProperty" type="radio" name="Q0050" value="true"><span class="answerItem">② 2</span><br>
+          <input class="answerProperty" type="radio" name="Q0050" value=""><span class="answerItem">③ 2.5</span><br>
+          <input class="answerProperty" type="radio" name="Q0050" value=""><span class="answerItem">④ 3</span>
+        </p>
+      </div>
+
+      <div id="Q0051" class="quiz-container">
+        <p class="question">
+          51. 가공전선로의 지지물에서 다른 지지물을 거치지 아니하고 수용장소의 인입선 접속점에 이르는 가공 전선을
+          무엇이라 하는가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0051" value=""><span class="answerItem">① 옥외 전선</span><br>
+          <input class="answerProperty" type="radio" name="Q0051" value=""><span class="answerItem">② 연접 인입선</span><br>
+          <input class="answerProperty" type="radio" name="Q0051" value="true"><span class="answerItem">③ 가공 인입선</span><br>
+          <input class="answerProperty" type="radio" name="Q0051" value=""><span class="answerItem">④ 관등회로</span>
+        </p>
+      </div>
+
+      <div id="Q0052" class="quiz-container">
+        <p class="question">
+          52. 저압크레인 또는 호이스트 등의 트롤리선을 애자사용 공사에 의하여 옥내의 노출장소에 시설하는 경우
+          트롤리선의 바닥에서의 최소 높이는 몇 [m] 이상으로 설치하는가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0052" value=""><span class="answerItem">① 2</span><br>
+          <input class="answerProperty" type="radio" name="Q0052" value=""><span class="answerItem">② 2.5</span><br>
+          <input class="answerProperty" type="radio" name="Q0052" value=""><span class="answerItem">③ 3</span><br>
+          <input class="answerProperty" type="radio" name="Q0052" value="true"><span class="answerItem">④ 3.5</span>
+        </p>
+      </div>
+
+      <div id="Q0053" class="quiz-container">
+        <p class="question">
+          53. 연선 결정에 있어서 중심 소선을 뺀 층수가 2층이다. 소선의 총수 N은 얼마인가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0053" value=""><span class="answerItem">① 45</span><br>
+          <input class="answerProperty" type="radio" name="Q0053" value=""><span class="answerItem">② 39</span><br>
+          <input class="answerProperty" type="radio" name="Q0053" value="true"><span class="answerItem">③ 19</span><br>
+          <input class="answerProperty" type="radio" name="Q0053" value=""><span class="answerItem">④ 9</span>
+        </p>
+      </div>
+
+      <div id="Q0054" class="quiz-container">
+        <p class="question">
+          54. 관을 시설하고 제거하는 것이 자유롭고 점검 가능한 은폐장소에서 가요전선관을 구부리는 경우
+          곡률 반지름은 2종 가요전선관 안지름의 몇 배 이상으로 하여야 하는가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0054" value=""><span class="answerItem">① 10</span><br>
+          <input class="answerProperty" type="radio" name="Q0054" value=""><span class="answerItem">② 9</span><br>
+          <input class="answerProperty" type="radio" name="Q0054" value=""><span class="answerItem">③ 6</span><br>
+          <input class="answerProperty" type="radio" name="Q0054" value="true"><span class="answerItem">④ 3</span>
+        </p>
+      </div>
+
+      <div id="Q0055" class="quiz-container">
+        <p class="question">
+          55. 일반적으로 학교 건물이나 은행 건물 등의 간선의 수용률은 얼마인가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0055" value=""><span class="answerItem">① 50[%]</span><br>
+          <input class="answerProperty" type="radio" name="Q0055" value=""><span class="answerItem">② 60[%]</span><br>
+          <input class="answerProperty" type="radio" name="Q0055" value="true"><span class="answerItem">③ 70[%]</span><br>
+          <input class="answerProperty" type="radio" name="Q0055" value=""><span class="answerItem">④ 80[%]</span>
+        </p>
+      </div>
+
+      <div id="Q0056" class="quiz-container">
+        <p class="question">
+          56. 자가용 전기설비의 보호계전기의 종류가 아닌 것은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0056" value=""><span class="answerItem" class="answerItem" class="answerItem">① 과전류계전기</span><br>
+          <input class="answerProperty" type="radio" name="Q0056" value=""><span class="answerItem" class="answerItem" class="answerItem">② 과전압계전기</span><br>
+          <input class="answerProperty" type="radio" name="Q0056" value=""><span class="answerItem" class="answerItem" class="answerItem">③ 부족전압계전기</span><br>
+          <input class="answerProperty" type="radio" name="Q0056" value="true"><span class="answerItem" class="answerItem" class="answerItem">④ 부족전류계전기</span>
+        </p>
+      </div>
+
+      <div id="Q0057" class="quiz-container">
+        <p class="question">
+          57. 동전선의 직선접속(트위스트 조인트)은 몇 [㎟]이하의 전선이어야 하는가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0057" value=""><span class="answerItem" class="answerItem">① 2.5</span><br>
+          <input class="answerProperty" type="radio" name="Q0057" value="true"><span class="answerItem" class="answerItem">② 6</span><br>
+          <input class="answerProperty" type="radio" name="Q0057" value=""><span class="answerItem" class="answerItem">③ 10</span><br>
+          <input class="answerProperty" type="radio" name="Q0057" value=""><span class="answerItem" class="answerItem">④ 16</span>
+        </p>
+      </div>
+
+      <div id="Q0058" class="quiz-container">
+        <p class="question">
+          58. 간선에 접속하는 전동기의 정격전류의 합계가 100[A]인 경우에 간선의 허용전류가 몇 [A]인
+          전선의 굵기를 선정하여야 하는가?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0058" value=""><span class="answerItem">① 100</span><br>
+          <input class="answerProperty" type="radio" name="Q0058" value="true"><span class="answerItem">② 110</span><br>
+          <input class="answerProperty" type="radio" name="Q0058" value=""><span class="answerItem">③ 125</span><br>
+          <input class="answerProperty" type="radio" name="Q0058" value=""><span class="answerItem">④ 200</span>
+        </p>
+      </div>
+
+      <div id="Q0059" class="quiz-container">
+        <p class="question">
+          59. 차량, 기타 중량물의 하중을 받을 우려가 있는 장소에 지중전선로를 직접 매설식으로 매설하는 경우
+          매설 깊이는?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0059" value=""><span class="answerItem">① 60[㎝] 미만</span><br>
+          <input class="answerProperty" type="radio" name="Q0059" value=""><span class="answerItem">② 60[㎝] 이상</span><br>
+          <input class="answerProperty" type="radio" name="Q0059" value=""><span class="answerItem">③ 120[㎝] 미만</span><br>
+          <input class="answerProperty" type="radio" name="Q0059" value="true"><span class="answerItem">④ 120[㎝] 이상</span>
+        </p>
+      </div>
+
+      <div id="Q0060" class="quiz-container">
+        <p class="question">
+          60. 불연성 먼지가 많은 장소에 시설할 수 없는 옥내 배선공사 방법은?
+        </p>
+        <p class="choice">
+          <input class="answerProperty" type="radio" name="Q0060" value=""><span class="answerItem">① 금속관 공사</span><br>
+          <input class="answerProperty" type="radio" name="Q0060" value=""><span class="answerItem">② 금속제 가요전선관 공사</span><br>
+          <input class="answerProperty" type="radio" name="Q0060" value="true"><span class="answerItem">③ 두께가 1.2[㎜]인 합성수지관 공사</span><br>
+          <input class="answerProperty" type="radio" name="Q0060" value=""><span class="answerItem">④ 애자 사용 공사</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+
+    <script type="text/javascript">
+
+/*
+      var text = ""
+
+      text += quizzes[59].childNodes.length + "<br>"
+      for (var i = 0; i < quizzes[59].childNodes.length; i++) {
+        text += quizzes[59].childNodes[i].nodeName + "<br>";
+      }
+
+      document.getElementById("demo2").innerHTML = text;
+
+      document.getElementById("demo").innerHTML = quizzes.length;
+      quizzes[59].childNodes[3].childNodes[2].style.color = "blue";
+      quizzes[59].childNodes[3].childNodes[2].style.textDecoration = "line-through";
+
+      alert(quizzes[59].childNodes[1].className);
+      if (quizzes[59].childNodes[3].className == "choice") {
+        alert("Yes");
+      } else {
+        alert("No");
+      }
+
+      alert(document.baseURI);
+      alert(document.title);
+      alert(quizzes[59].getElementsByTagName("input")[0].value);
+      alert(quizzes[59].querySelectorAll("p.question")[0].innerHTML);
+
+      if (quizzes[59].getElementsByTagName("input")[0].value == true) {
+        alert("Yes");
+      } else {
+        alert("No")
+      }
+*/
+      </script>
+  </body>
+</html>
